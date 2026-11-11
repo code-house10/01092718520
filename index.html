@@ -65,6 +65,121 @@ $(window).on('load', function()
    $('#preloader').remove();
 });
 </script>
+
+<style id="zohour-custom-sections">
+/* الهيرو بعرض الشاشة بالكامل ومن دون فراغات جانبية */
+#wb_LayoutGrid2 {
+  width: 100%;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background-image: url('https://ik.imagekit.io/mkek1asn5/images/zohour/hero.webp') !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  min-height: 520px;
+}
+#wb_LayoutGrid2 > #LayoutGrid2 {
+  width: 100%;
+  max-width: none !important;
+  min-height: 520px;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background: transparent !important;
+}
+#wb_LayoutGrid2 .row,
+#wb_LayoutGrid2 [class^="col-"] {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* فاصل زخرفي احترافي بين الهيرو والأقسام */
+.zohour-hero-divider {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: clamp(48px, 6vw, 88px);
+  margin: -1px 0 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 0;
+  background: transparent;
+}
+.zohour-hero-divider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* قسم المنشورات الثلاثة */
+#zohour-posts {
+  direction: rtl;
+  padding: 55px 20px 65px;
+  background: #f7f8fa;
+  font-family: 'Cairo', sans-serif;
+}
+#zohour-posts .zohour-posts-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#zohour-posts .zohour-posts-heading {
+  margin: 0 0 32px;
+  text-align: center;
+  color: #263746;
+  font-size: 30px;
+  font-weight: 800;
+}
+#zohour-posts .zohour-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+#zohour-posts .zohour-post-card {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 7px 24px rgba(0,0,0,.09);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+#zohour-posts .zohour-post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.14);
+}
+#zohour-posts .zohour-post-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+#zohour-posts .zohour-post-card h3 {
+  margin: 0;
+  padding: 17px 14px 20px;
+  color: #263746;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  #wb_LayoutGrid2, #wb_LayoutGrid2 > #LayoutGrid2 {
+    min-height: 360px;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  #zohour-posts { padding: 38px 15px 45px; }
+  #zohour-posts .zohour-posts-heading { font-size: 24px; margin-bottom: 22px; }
+  #zohour-posts .zohour-posts-grid { grid-template-columns: 1fr; gap: 18px; }
+}
+</style>
+
 </head>
 <body data-bs-spy="scroll" ">
 
@@ -236,6 +351,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </div>
+<div class="zohour-hero-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,38 C220,92 420,92 650,48 C900,0 1120,8 1440,54 L1440,100 L0,100 Z" fill="#f7f8fa"/>
+    <path d="M0,37 C220,91 420,91 650,47 C900,-1 1120,7 1440,53" fill="none" stroke="#d5a642" stroke-width="3" opacity=".9"/>
+    <path d="M0,47 C240,98 440,99 665,58 C910,14 1130,17 1440,64" fill="none" stroke="#ffffff" stroke-width="2" opacity=".8"/>
+  </svg>
+</div>
+<section id="zohour-posts" aria-label="خدمات شركة الزهور">
+  <div class="zohour-posts-inner">
+    <h2 class="zohour-posts-heading">خدمات شركة الزهور لنقل العفش</h2>
+    <div class="zohour-posts-grid">
+      <article class="zohour-post-card">
+        <img src="https://ik.imagekit.io/mkek1asn5/images/zohour/trucks.webp" alt="سيارات شركة الزهور المخصصة لنقل العفش" loading="lazy">
+        <h3>سيارات نقل عفش مجهزة</h3>
+      </article>
+      <article class="zohour-post-card">
+        <img src="https://ik.imagekit.io/mkek1asn5/images/zohour/winch.webp" alt="ونش رفع العفش والأثاث للأدوار المرتفعة" loading="lazy">
+        <h3>ونش رفع العفش</h3>
+      </article>
+      <article class="zohour-post-card">
+        <img src="https://ik.imagekit.io/mkek1asn5/images/zohour/backing.webp" alt="خدمات تغليف وحماية الأثاث قبل النقل" loading="lazy">
+        <h3>تغليف وحماية الأثاث</h3>
+      </article>
+    </div>
+  </div>
+</section>
 <div id="wb_LayoutGrid11">
 <div id="LayoutGrid11">
 <div class="row">
